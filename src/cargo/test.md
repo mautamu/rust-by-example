@@ -121,7 +121,7 @@ mod tests {
 
 Although the intent is to get the following:
 ```shell
-$ cat ferris.txt
+$ cargo test test_foo; cat ferris.txt
 Ferris
 Ferris
 Ferris
@@ -133,9 +133,9 @@ Corro
 Corro
 Corro
 ```
-What actually gets put into `ferris.txt` is this:
+What actually gets written into `ferris.txt` is this:
 ```shell
-$ cargo test test_foo
+$ cargo test test_foo; cat ferris.txt
 Corro
 Ferris
 Corro
